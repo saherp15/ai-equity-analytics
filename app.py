@@ -1,3 +1,7 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import google.generativeai as genai
 with open("indian_equity_market_data.csv", "rb") as file:
     st.download_button(
         label="📥 Download Sample Dataset",
@@ -5,10 +9,7 @@ with open("indian_equity_market_data.csv", "rb") as file:
         file_name="indian_equity_market_data.csv",
         mime="text/csv"
     )
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import google.generativeai as genai
+
 genai.configure(
     api_key=st.secrets["GEMINI_API_KEY"]
 )
