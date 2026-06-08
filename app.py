@@ -1,3 +1,10 @@
+with open("indian_equity_market_data.csv", "rb") as file:
+    st.download_button(
+        label="📥 Download Sample Dataset",
+        data=file,
+        file_name="indian_equity_market_data.csv",
+        mime="text/csv"
+    )
 import streamlit as st
 import pandas as pd
 import plotly.express as px
